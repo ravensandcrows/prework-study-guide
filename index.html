@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Prework Study Guide</title>
   </head>
   <body>
@@ -15,37 +16,61 @@
       <section class="card" id="html-section">
         <h2>HTML</h2>
         <ul>
-          <li>The head element contains information about the webpage and defines three elements</li>
+          <li>The HEAD element contains information about the webpage</li>
             <ul>
-              <li> The charset element -> sets character encoding </li>
-              <li>The http-equive element sets an HTTP header for content</li>
-              <li>The viewport element sets the default view for our webpage</li>
-            </ul>
-          <li>The body element represents the visible content shown to the user</li>
-            <ul>
-              <li>When working with visible HTML elements, the content is contained between an opening tag and a closing tag</li>
-            </ul>
-          <li> Div creates a division in the page</li> 
-          <li> Span creates an inline division</li>
-          <li> The h1, h2, h3, h4, h5, and h6 elements represent the level of heading a given text block represents</li>
-            <ul>
-              <li> h1 should only be used once per page + headers should be used in ascending order</li>
-            </ul>
-          <li>The p element represents a paragraph or block of text </li>
-          <li>The ul, ol, and li elements represent unordered lists, ordered lists, and list items </li>
-          <li>The img element contains information about images that are displayed on the webpage</li>
-            <ul>
-              <li>The src attribute is the most important because it defines the location of the image</li>
-              <li>The alt attribute contains a text string that describes the appearance and functionality of the image.</li> 
+              <li>Defines three elements:</li>  
                 <ul>
-                  <li>Helps with screen readers, assistive devices, and can improves SEO rankings</li>
+                  <li> The charset element -> sets character encoding </li>
+                  <li>The http-equive element sets an HTTP header for content</li>
+                  <li>The viewport element sets the default view for our webpage</li>
+                </ul>
+              <li>The HREF attribute points to the URL for the link for both BODY and HEAD</li>
+              <li>Can embed an entire stylesheet directly in the HTML file using a STYLE element in the HEAD element</li>
+                <ul>
+                  <li>The rules only apply to that page
+                    <ul>
+                      <li>can configure CSS classes and IDs -> used to identify elements, to style multiple elements in the page</li>
+                    </ul>
+                </ul>
+              <li> a LINK element creates the connection to the external file. Use:</li>
+                <ul>
+                  <li>REL attribute specifies the relationship between the current document and the linked document resource</li>
+                  <li>HREF links to external resource, using a relative path</li>
                 </ul>
             </ul>
-          <li>The br element creates a line of empty space, or a line break </li>
-          <li>The a element (which stands for anchor) creates links to the same webpage or other webpages</li>
-          <li>The href attribute points to the URL for the link</li>
-          <li> The footer appears at the bottom of the page and usually contains the author, copyright, contact, sitemap, and navigation</li>
-          <li>The section elements are semantic elements that define a section in a document that contains thematic content</li>
+          <li>The BODY element represents the visible content shown to the user</li>
+            <ul>
+              <li>When working with visible HTML elements, the content is contained between an opening tag and a closing tag</li>
+              <li> DIV creates a division in the page</li> 
+              <li> SPAN creates an inline division</li>
+              <li> The H1, H2, H3, H4, H5, and H6 elements represent the level of heading a given text block represents</li>
+                <ul>
+                  <li> H1 should only be used once per page + headers should be used in ascending order</li>
+                </ul>
+              <li>The P element represents a paragraph or block of text </li>
+              <li>The UL, OL, and LI elements represent unordered lists, ordered lists, and list items </li>
+              <li>The IMG element contains information about images that are displayed on the webpage</li>
+                <ul>
+                  <li>The SRC attribute is the most important because it defines the location of the image</li>
+                  <li>The ALT attribute contains a text string that describes the appearance and functionality of the image.</li> 
+                    <ul>
+                      <li>Helps with screen readers, assistive devices, and can improves SEO rankings</li>
+                    </ul>
+                </ul>
+              <li>The BR element creates a line of empty space, or a line break </li>
+              <li>The A element (which stands for anchor) creates links to the same webpage or other webpages</li>
+            </ul>
+          <li> The FOOTER appears at the bottom of the page and usually contains the author, copyright, contact, sitemap, and navigation</li>
+          <li>The SECTION elements are semantic elements that define a section in a document that contains thematic content</li>
+            <ul>
+              <li>Creates a class =“___”; can be referenced in CSS</li>
+            </ul>
+          <li>To STYLE an element directly in the HTML file use inline CSS</li>
+            <ul>
+              <li>Inline styles apply to a specific HTML tag, with a style attribute from a CSS rule</li>
+              <li>+ Quick and permanent changes</li> 
+              <li>- less flexible</li>
+            </ul>
         </ul>
 
       </section>
@@ -53,7 +78,64 @@
       <section class="card" id="css-section">
         <h2>CSS</h2>
         <ul>
-          <li>Enter your CSS notes here</li>
+          <li>STYLE RULES</li>
+            <ul>
+              <li>Can set multiple effects separated by commas</li>
+              <li>period preceding _____ (ie .card) designates CLASS selector</li>
+                <ul>
+                  <li>CLASS allows us to share a CSS rule to any element assigned to the CLASS</li>
+                </ul>
+              <li> A SELECTOR defines the element or attributes to which the rules, or declarations, will apply; such as DIV, H1</li>
+                <ul>
+                  <li>DECLARATIONS contain two important components:</li>
+                    <ul>
+                      <li> The CSS property we want to apply</li>
+                      <li>The value of the property.</li> 
+                    </ul>
+                  <li>EX: The DECLARATION color: blue</li>  
+                </ul>
+              <li>Every HTML element is essentially a box that contains:</li>
+                <ul>
+                  <li>MARGINS</li>
+                  <li>BORDERS</li>
+                  <li>PADDING</li>
+                  <li>CONTENT</li>
+                </ul>
+              <li>External Style Sheet: MUST LINK to HTML</li>
+                <ul>
+                  <li>Link the file using a LINK element placed in the HTML's HEAD</li>
+                  <li>Ex: LINK REL="stylesheet" HREF="./assets/style.css" </li>
+                </ul>
+              <li>Sometimes, we want to apply a rule to all the elements visible on the page: use a special wild card symbol, or *</li>
+            </ul>
+          <li> STYLE OPTIONS</li>
+          <ul>
+            <li>COLOR uses semantic reference ie gray or by hex #</li>
+            <li>WIDTH, use % or px</li>
+            <li>MARGIN PROPERTY(how much space around the outside of an element)</li>
+              <ul>
+                <li>Use px value to TOP, BOTTOM, LEFT, & RIGHT</li>
+                <li>AUTO can be used in place of px</li>
+                <li>MARGIN 0: means no space around element</li>
+              </ul>
+            <li>PADDING: adds space around the content inside element</li>
+              <ul>
+                <li>Increase padding = enlargen element</li>
+              </ul>
+            <li>BORDER PROPERTY assigns a border with a WIDTH, HEIGHT, and COLOR</li>
+            <li>BOX-SHADOW adds shadow effect arond element frame:</li>
+               <ul>
+                <li>uses X (+ right, - left) & Y (+ below, -above) to offset relative to element</li>
+                <li>BLUR and SPREAD radius, and COLOR</li>
+               </ul>
+            <li>IMG</li>
+               <ul>
+                <li>DISPLAY</li>
+                <ul>
+                  <li>BLOCK: assigns each image to start on a new lin</li>
+                </ul>
+               </ul>
+          </ul>
         </ul>
    
       </section>
@@ -84,7 +166,7 @@
       </section>
 
       <section class="card" id="terminal-section">
-        <h2>Terminal</h2>
+        <h2>Terminal + Other Tips</h2>
         <ul>
           <li>pwd: check location of the directory (print working directory)</li>
           <li>ls: shows a list of files and folders</li>
@@ -94,6 +176,20 @@
           <li>touch ____ .txt: creates a text file</li>
           <li>open ___: open files</li>
           <li>code .: open VS</li>
+          <li>Most common way to style a webpage is by using an external CSS style sheet</li>
+            <ul>
+              <li>Preferred because it allows developers to keep all their CSS rules in a separate file making design changes easier</li>
+            </ul>
+          <li>Do Not Repeat Yourself (DRY)</li>
+            <ul>
+              <li>Coding principle encouraging developers to reuse or share pieces of code to reduce the number of lines of code that need to be written or maintained.</li>
+              <li>DRY can greatly reduce the overall size and complexity of a codebase.</li>
+            </ul>
+          <li>Separation of Concerns is a widely used term in web development</li>
+            <ul>
+              <li>Refers to separating code into different files based on use</li>
+              <li>It is based on the idea that each section of code should have its own responsibility</li>
+            </ul> 
         </ul>
       </section>
     </main>
