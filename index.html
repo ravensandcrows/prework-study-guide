@@ -161,7 +161,104 @@
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
         <ul>
-          <li>Enter your Javascript Notes here</li>
+          <li>JavaScript (JS), a high-level dynamic programming language,  allows users to interact with websites</li> 
+          <li>One of the most popular modern web technologies</li>
+          <li>Can power  websites with effects, interactivity, data communication, and more!</li>
+          <li>A weakly typed language allowing implicit type conversion when an operation involves mismatched types instead of throwing type errors.</li>
+            <ul>
+              <li>Click a button, retrieve data, or fill out a form</li>
+            </ul>
+          <li>To do this JavaScript defines a handful of coercion rules.</li>
+            <ul>
+              <li>The primitive coercion process is used where a primitive value is expected, but there's no strong preference for what the actual type should be.</li>
+            </ul>
+          <li>Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort</li>
+            <ul>
+              <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.
+              </li>
+              <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+              <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.
+              </li>
+            </ul>
+          <li>JS RULES</li>
+            <ul>
+              <li>MUST link in the html sheet under footer before body closing tabs</li>
+                <ul>
+                  <li>the script.js file is linked within the BODY element.</li>
+                  <li>ex: SCRIPT src="./assets/script.js" SCRIPT</li>
+                </ul> 
+              <li>A semicolon at the end of a line indicates where a statement ends</li>
+              <li>Case sensitive</li>
+              <li>All types except OBJECT define immutable values represented directly at the lowest level of the language aka PRIMITIVE VALUES</li>
+              <li>All PRIMITIVE types, except NULL, can be tested by the TYPEOF operator.</li>
+              <li>STRINGS are immutable. This means that once a string is created, it is not possible to modify it</li>
+              <li>OBJECTS are the only mutable values</li> 
+              <li>FUNCTIONS are also OBJECTS with the additional capability of being CALLABLE.</li>
+              <li>When representing dates, the best choice is to use the built-in Date utility in JavaScript.</li>
+            </ul>
+          <li>NULL vs UNDEFINED</li>
+            <ul>
+              <li>UNDEFINED is the absence of a value; NULL is the absence of an object</li>
+              <li>NULL is a keyword; UNDEFINED is a normal identifier that is also a global property.</li>
+            </ul>
+          <li>NUMBER vs BIGINT</li>
+            <ul>
+              <li>NUMBER</li>
+                <ul>
+                  <li>A double-precision 64-bit binary format IEEE 754 value.</li>
+                  <li>Can store positive floating-point numbers between 2^-1074 (Number.MIN_VALUE) and 2^1024 (Number.MAX_VALUE)</li>
+                  <li>And negative floating-point numbers between -2^-1074 and -2^1024</li>
+                  <li>Can only safely store integers in the range -(253 - 1) (Number.MIN_SAFE_INTEGER) to 253 - 1 (Number.MAX_SAFE_INTEGER). </li>
+                    <ul>
+                      <li>Outside this range, JavaScript can no longer safely represent integers</li> 
+                      <li>Unsafe intergers will instead be represented by a double-precision floating point approximation.</li>
+                      <li>Check if a number is within the safety range using Number.isSafeInteger().</li>
+                    </ul>
+                  </ul>
+              <li>BIGINT</li>
+                  <ul>
+                    <li>A numeric primitive that can represent integers with arbitrary magnitude</li> 
+                    <li>Can safely store and operate on large integers even beyond the safe integer limit (Number.MAX_SAFE_INTEGER) for Numbers</li>
+                    <li>Created by appending N to the end of an integer or by calling the BigInt() function.</li>
+                    <li>Can use most operators with BigInts</li>
+                  </ul>
+            </ul>
+          <li>JS SYNTAX</li>
+          <ul>
+            <li>VAR ____ declares a variable</li>
+            <li>STRINGS need ""</li>
+            <li>CONSOLE.LOG outputs a message to the web console by adding an argument</li>
+            <li>NaN ("Not a Number") is a special kind of number value that's typically encountered when the result of an arithmetic operation cannot be expressed as a number.</li>
+              <ul>
+                <li>It is also the only value in JavaScript that is not equal to itself.</li>
+              </ul>
+            <li>ACCESSOR pairs a key with one of two ACCESSOR functions (get and set) to retrieve or store a value.</li>
+            <li>GET a function called with an empty argument list to retrieve the property value whenever a get access to the value is performed</li>
+            <li>SET a function called with an argument that contains the assigned value. Executed whenever a specified property is attempted to be changed.</li>
+            <li>ENUMERABLE a boolean value indicating if the property can be enumerated by a for...in loop. </li>
+            <li>CONFIGURABLE a boolean value indicating if the property can be deleted, can be changed to a data property, and can have its attributes changed.</li>
+            <li>OBJECTS are ad-hoc key-value pairs, so they are often used as MAPS.</li>
+              <ul>
+                <li>Can be ergonomics, security, and performance issues</li>
+              </ul>
+            <li>MAP is preferred for storing arbitrary data </li>
+            <li>IF / ELSE IF / ELSE code will only execute if the statement meets a condition, or is true.</li>
+            <li>The strict equality operator (===) checks to see if two values are equal</li>
+            <li>FOR LOOP</li>
+              <ul>
+                <li>Uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
+                <li>Needs another statement to interrupt the control flow</li>
+                <li>Contains three statements</li>
+                  <ul>
+                    <li>1: determines the starting point for our loop</li>
+                    <li>2: is the condition</li>
+                    <li>3: is what allows the array to iterate over each item.</li>
+                    <li>ex: for(var x = 0; x < shapes.length; x++) {}</li>
+                  </ul>
+              </ul>
+            <li>LENGTH: finds the length of an array</li>
+            <li> The code x++ is a shortcut way of writing x+1</li>
+          </ul>
         </ul>
    
       </section>
@@ -191,6 +288,47 @@
               <li>Refers to separating code into different files based on use</li>
               <li>It is based on the idea that each section of code should have its own responsibility</li>
             </ul> 
+          <li>REAL INTERACTIVITY on a website requires event handlers.</li>
+            <ul>
+              <li>These are code structures that listen for activity in the browser, and run code in response.</li>
+            </ul> 
+          <li>CONTROL FLOW or the order in which a computer executes code</li>
+          <li>CONDITIONALS are code structures used to test if an expression returns true or not. </li>
+          <li>FUNCTIONS are a set of instructions that tells the computer how to perform a certain task.</li>
+          <li>ARRAYS can be used to store data types</li>
+          <li>BOOLEAN is a true or false conditional.</li>
+          <li>STRINGS is textual data encoded as a sequence of 16-bit unsigned integer values representing UTF-16 code units</li> 
+            <ul>
+              <li>Each element in the string occupies a position in the string</li> 
+              <li>The first element is at index 0, the next at index 1, and so on.</li>
+              <li>Using strings to represent complex data comes with short-term benefits:</li>
+                <ul>
+                  <li>Easy to build complex strings with concatenation.</li>
+                  <li>Easy to debug (what you see printed is always what is in the string)</li>
+                  <li>Are the common denominator of a lot of APIs</li>
+                </ul>
+              <li>BUT creates unnecessary maintenance burdens because it breaks LISTS when separators are used, or unexpected inputs can be put in like the escape key</li>
+            </ul>
+          <li>SYMBOL is a unique and immutable primitive value and may be used as the key of an OBJECT property</li>
+          <li>OBJECT is a value in memory which is possibly referenced by an IDENTIFIER.</li>
+          <li>ARRAYS are regular objects for which there is a particular relationship between integer-keyed properties and the length property.</li>
+            <ul>
+              <li>A perfect candidate to represent ordered lists</li>
+              <li>Typically used to hold data that is related in some way</li>
+              <li>Though not limited to contain only a single type of data</li>
+              <li>Uses a unique number called an index to pair inputs</li>
+              <li>Zero-indexed and sequential</li>
+            </ul>
+          <li>Typed Arrays present an array-like view of an underlying binary data buffer, and are similar to arrays</li>
+            <ul>
+              <li>Is an umbrella term for a range of data structures</li>
+            </ul>
+          <li>These data structures take object references as keys</li>
+            <ul>
+              <li>SET and WEAKSET represent a collection of unique values</li>
+              <li>MAP and WEAKMAP represent a collection of key-value associations.</li>
+            </ul> 
+          <li>JSON (JavaScript Object Notation) is a lightweight data-interchange format, derived from JavaScript, but used by many programming languages.</li>
         </ul>
       </section>
     </main>
